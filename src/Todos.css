@@ -9,7 +9,7 @@ div{
 }
 
 
-ul {
+ul{
   list-style: none;
   padding: 0;  /* Removes default padding */
   margin: 0;   /* Removes default margin */
@@ -17,10 +17,11 @@ ul {
 
 
 
-li {
-  display: flex;                 
+li{
+  /* display: flex;                  */
   justify-content: space-between;
   align-items: center; 
+  overflow: hidden;
             
   border-radius: 20px;
   padding: 10px 15px;
@@ -37,13 +38,12 @@ li {
   color: black;
   background-color: white;
 
-
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
 
-.deleteButton {
+.deleteButton{
   width: 30px;
   height: 30px;
   background: url("/del.png") no-repeat center;
@@ -53,18 +53,27 @@ li {
   flex-shrink: 0;                /* Prevent button from shrinking */
 }
 
-.deleteButton:hover {
+.deleteButton:hover{
   transform: scale(1.1);         /* Slight grow on hover */
   transition: transform 0.2s ease;
 }
 
 
-
-.todo-text {
+.todo-text{ 
   flex: 1;                   /* Take all remaining space */
   margin-right: 10px;         /* Gap before button */
+  float: left;
+  width: 80%;
+
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+}
+
+.todo-button{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

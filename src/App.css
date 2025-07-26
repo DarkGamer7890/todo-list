@@ -1,26 +1,48 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 
-.App {
-  /* display: flex; */
+#App {
   padding: 20px;
+  padding-top: 0px;
+  border: 10px solid white;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0.5)
+}
+
+#App:hover{
+  filter: drop-shadow(0 0 10px #6a0dad) 
+        drop-shadow(0 0 20px #6a0dad) 
+        drop-shadow(0 0 40px #6a0dad);
+  transition: filter 0.3s ease-in-out;
+}
+
+
+#heading{
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  color: #242424;
+}
+
+#heading img {
+  display: inline-block;
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+}
+
+#heading h1 {
+  display: inline-block;
 }
 
 
 form{
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-div{
   justify-content: center;
   align-items: center;
 }
@@ -31,7 +53,7 @@ div{
 }
 
 
-p {
+p{
   display: flex;              /* Arrange input and button horizontally */
   justify-content: space-between;
   align-items: center;
@@ -42,7 +64,7 @@ p {
   background-color: white;
 }
 
-input {
+input{
   flex: 1;                    /* Input takes available space */
   padding: 10px;
   border: none;
@@ -55,11 +77,11 @@ input {
   justify-content: center;
 }
 
-#addButton {
+#addButton{
   margin-left: 10px;          /* Space between input and button */
   padding: 10px 20px;
   border: none;
-  background-color: red;
+  background: linear-gradient(to right, rgb(138, 0, 0), rgb(255, 81, 0));
   border-radius: 50px;
   width: 70px;
   height: 50px;
@@ -68,7 +90,7 @@ input {
 }
 
 
-.toast {
+.toast{
   width:auto; 
   position: fixed;
   top: -100px;
@@ -83,15 +105,28 @@ input {
 }
 
 
-.toast.show {
+.toast.show{
   top: 20px;
   opacity: 1;
   transition: top 0.5s ease-in-out, opacity 0.5s ease;
 }
 
 
-.toast.hide {
+.toast.hide{
   top: -100px;
   opacity: 0;
   transition: top 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+#logo{
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }

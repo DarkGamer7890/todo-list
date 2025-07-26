@@ -1,6 +1,7 @@
 import { useCallback, useState, useRef, useEffect } from 'react'
 import Todos from "./Todos.jsx";
 import './App.css';
+import { preconnect } from 'react-dom';
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -17,7 +18,7 @@ function App() {
 
 
   const addTodo = useCallback(() => {
-      setTodos([todo, ...todos]);
+      setTodos((prevTodos) => [todo, ...prevTodos]);
       setTodo("");
   }, [todo, todos]);
 
@@ -44,8 +45,11 @@ function App() {
   } 
 
   return (
-    <div className='App'>
-      <h1 style={{textAlign:'center', color:'#242424'}}>React Todo-List</h1>
+    <div id='App'>
+      <div id='heading'>
+        <img src="./react.svg" id="logo" alt="React Logo"/>
+        <h1>React Todo-List</h1>
+      </div>
       <form onSubmit={handleSubmit}>
         <p>
           <input 

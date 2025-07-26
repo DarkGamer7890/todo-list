@@ -6,7 +6,7 @@
   /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background: linear-gradient(to bottom, rgb(36, 94, 221), rgb(3, 3, 133));
+  background: linear-gradient(to bottom, rgb(36, 94, 221), rgb(1, 1, 85));
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +46,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+button:hover {  
   border-color: #646cff;
 }
 button:focus,

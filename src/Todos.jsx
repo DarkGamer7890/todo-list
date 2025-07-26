@@ -10,7 +10,7 @@ const Todos = ({ todos }) => {
     })
 
     const handleDelete = (e) => {
-        if(e.target.tagName === 'BUTTON') e.target.parentElement.remove();
+        if(e.target.tagName === 'BUTTON') e.target.parentElement.parentElement.remove();
     }
 
     return(
@@ -18,7 +18,7 @@ const Todos = ({ todos }) => {
             {todos && todos.map((todo, index) => 
                 <li key={index}>
                     <span className="todo-text">{todo}</span>
-                    <button className='deleteButton' onClick={handleDelete} />
+                    <span className="todo-button"><button className='deleteButton' onClick={handleDelete} /></span>
                 </li>
             )}
         </ul>
