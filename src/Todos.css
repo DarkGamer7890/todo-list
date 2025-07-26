@@ -1,0 +1,70 @@
+div{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    padding: 30PX;
+    padding-bottom: 0;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;  /* Removes default padding */
+  margin: 0;   /* Removes default margin */
+}
+
+
+
+li {
+  display: flex;                 
+  justify-content: space-between;
+  align-items: center; 
+            
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 10px auto;
+  margin-bottom: 30px;
+  width: 570px;   
+
+  font-size: 20px;
+  font-weight: bold;
+
+  list-style-type: none;      
+  box-sizing: border-box;
+
+  color: black;
+  background-color: white;
+
+
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.deleteButton {
+  width: 30px;
+  height: 30px;
+  background: url("/del.png") no-repeat center;
+  background-size: contain;      /* Scale the icon */
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;                /* Prevent button from shrinking */
+}
+
+.deleteButton:hover {
+  transform: scale(1.1);         /* Slight grow on hover */
+  transition: transform 0.2s ease;
+}
+
+
+
+.todo-text {
+  flex: 1;                   /* Take all remaining space */
+  margin-right: 10px;         /* Gap before button */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+

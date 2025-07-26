@@ -1,0 +1,97 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+
+.App {
+  /* display: flex; */
+  padding: 20px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+div{
+  justify-content: center;
+  align-items: center;
+}
+
+#todos{
+  justify-content: center;
+  align-items: center;
+}
+
+
+p {
+  display: flex;              /* Arrange input and button horizontally */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;                /* Full width of parent */
+  max-width: 700px;           /* Limit width */
+  margin: 0 auto;             /* Center horizontally */
+  border-radius: 50px;
+  background-color: white;
+}
+
+input {
+  flex: 1;                    /* Input takes available space */
+  padding: 10px;
+  border: none;
+  outline: none;              /* Remove orange border */
+  box-sizing: border-box;
+  border-radius: 50px;
+  width: 500px;
+  font-size: 20px;
+  font-weight: bolder;
+  justify-content: center;
+}
+
+#addButton {
+  margin-left: 10px;          /* Space between input and button */
+  padding: 10px 20px;
+  border: none;
+  background-color: red;
+  border-radius: 50px;
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.toast {
+  width:auto; 
+  position: fixed;
+  top: -100px;
+  right: 20px;
+  background-color: green;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+
+.toast.show {
+  top: 20px;
+  opacity: 1;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease;
+}
+
+
+.toast.hide {
+  top: -100px;
+  opacity: 0;
+  transition: top 0.5s ease-in-out, opacity 0.5s ease;
+}
